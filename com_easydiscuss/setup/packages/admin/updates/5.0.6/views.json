@@ -1,0 +1,7 @@
+[
+	{
+		"table": "#__discuss_views",
+		"alter": "ip",
+		"query": "ALTER TABLE `#__discuss_views` MODIFY `ip` varchar(64) NOT NULL;"
+	}
+]

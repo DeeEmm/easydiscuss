@@ -1,0 +1,7 @@
+[
+    {
+        "table": "#__discuss_thread",
+        "column": "unlockdate",
+        "query": "ALTER TABLE `#__discuss_thread` ADD `unlockdate` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' AFTER `lockdate`;"
+    }
+]

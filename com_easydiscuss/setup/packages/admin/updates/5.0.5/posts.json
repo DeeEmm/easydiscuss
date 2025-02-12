@@ -1,0 +1,12 @@
+[
+	{
+		"table": "#__discuss_thread",
+		"index": "idx_post_alias",
+		"query": "ALTER TABLE `#__discuss_thread` ADD INDEX `idx_post_alias` (`alias` (128));"
+	},
+	{
+		"table": "#__discuss_posts",
+		"index": "idx_post_alias",
+		"query": "ALTER TABLE `#__discuss_posts` ADD INDEX `idx_post_alias` (`alias` (128));"
+	}
+]

@@ -1,0 +1,233 @@
+<?php
+/**
+* @package		EasyDiscuss
+* @copyright	Copyright (C) 2010 - 2015 Stack Ideas Sdn Bhd. All rights reserved.
+* @license		GNU/GPL, see LICENSE.php
+* EasyBlog is free software. This version may have been modified pursuant
+* to the GNU General Public License, and as distributed it includes or
+* is derivative of works licensed under the GNU General Public License or
+* other free or open source software licenses.
+* See COPYRIGHT.php for copyright notices and details.
+*/
+defined('_JEXEC') or die('Unauthorized Access');
+
+class EasyDiscussEvents extends EasyDiscuss
+{
+	public static function importPlugin($group = 'easydiscuss')
+	{
+		JPluginHelper::importPlugin($group);
+	}
+
+	/***
+	// list of Joomla 1.5 content triggers
+	'content_before_save'		=> 'onBeforeContentSave',
+	'content_after_save'		=> 'onAfterContentSave',
+	'content_before_delete'		=> '',
+	'content_after_delete'		=> '',
+	'content_before_display'	=> 'onBeforeDisplayContent',
+	'content_after_display'		=> 'onAfterDisplayContent',
+	'content_after_title'		=> 'onAfterDisplayTitle',
+	'content_prepare'			=> '',
+	'content_prepare_data'		=> '',
+	'content_prepare_form'		=> ''
+
+	// list of Joomla 1.6 content triggers
+	'content_before_save'		=> 'onContentBeforeSave',
+	'content_after_save'		=> 'onContentAfterSave',
+	'content_before_delete'		=> 'onContentBeforeDelete',
+	'content_after_delete'		=> 'onContentAfterDelete',
+	'content_before_display'	=> 'onContentBeforeDisplay',
+	'content_after_display'		=> 'onContentAfterDisplay',
+	'content_after_title'		=> 'onContentAfterTitle',
+	'content_prepare'			=> 'onContentPrepare',
+	'content_prepare_data'		=> 'onContentPrepareData',
+	'content_prepare_form'		=> 'onContentPrepareForm'
+	**/
+
+	public static function onContentBeforeSave($context = 'post', &$discussion = '', $isNew = false, $data = [])
+	{
+		// J4 required the fourth parameter https://docs.joomla.org/Plugin/Events/Content#onContentBeforeSave
+		$context = 'com_easydiscuss.' . $context;
+
+		self::beforeTrigger($discussion);
+
+		$result = EDDispatcher::trigger('onContentBeforeSave', array($context, &$discussion, $isNew, $data));
+
+		self::afterTrigger($discussion);
+
+		return $result;
+	}
+
+	public static function onContentAfterSave($context = 'post', &$data = '', $isNew = false)
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentAfterSave', array($context, &$data, $isNew));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentBeforeDelete($context = 'post', &$data = '')
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentBeforeDelete', array($context, &$data));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentAfterDelete($context = 'post', &$data = '')
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentAfterDelete', array($context, &$data));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentBeforeDisplay($context = 'post', &$data = '', &$params = array(), $limitstart = 0)
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		if (empty($params)) {
+			$params = ED::registry();
+		}
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentBeforeDisplay', array($context, &$data, &$params, $limitstart));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentAfterDisplay($context = 'post', &$data = '', &$params = array(), $limitstart = 0)
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		if (empty($params)) {
+			$params = ED::registry();
+		}
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentAfterDisplay', array($context, &$data, &$params, $limitstart));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentAfterTitle($context, &$data, &$params = array(), $limitstart = 0)
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		if (empty($params)) {
+			$params = ED::registry();
+		}
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentAfterTitle', array($context, &$data, &$params, $limitstart));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentPrepare($context = 'post', &$data = '', &$params = array(), $limitstart = 0)
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		if (empty($params)) {
+			$params = ED::registry();
+		}
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentPrepare', array($context, &$data, &$params, $limitstart));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentPrepareData($context = 'post', &$data = '')
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		self::beforeTrigger( $data );
+		$result = EDDispatcher::trigger('onContentPrepareData', array($context, &$data));
+		self::afterTrigger( $data );
+
+		return $result;
+	}
+
+	public static function onContentPrepareForm($form, &$data)
+	{
+		$context = 'com_easydiscuss.'.$context;
+
+		self::beforeTrigger($data);
+		$result = EDDispatcher::trigger('onContentPrepareForm', array($form, &$data));
+		self::afterTrigger($data);
+
+		return $result;
+	}
+
+	private static function beforeTrigger(&$arg)
+	{
+		$data = $arg;
+
+		// If give array, convert to object
+		if (is_array($data)) {
+			$tmp = new stdClass;
+			foreach ($data as $k => $v) {
+				$tmp->$k = $v;
+			}
+			$data = $tmp;
+			$data->from	= 'array';
+		}
+
+		if (empty($data->content)) {
+			return;
+		}
+
+		$content = '';
+		$data->_contentName = 'content';
+
+		if (isset($data->dc_reply_content)) {
+			$data->content = $data->dc_reply_content;
+			$data->_contentName = 'dc_reply_content';
+		}
+
+		$data->introtext	= '';
+		$data->text			= $data->content;
+		$data->created_by	= $data->user_id;
+		$data->easydiscuss	= true;
+
+		$arg = $data;
+
+		return;
+	}
+
+	private static function afterTrigger(&$data)
+	{
+		if (empty($data->text)) {
+			return;
+		}
+
+		// Replace the modified contents
+		$data->{$data->_contentName} = $data->text;
+
+		unset($data->introtext);
+		unset($data->text);
+		unset($data->created_by);
+		unset($data->easydiscuss);
+
+		if (isset($data->from) && $data->from == 'array') {
+			unset($data->from);
+			$data = (array) $data;
+		}
+
+		return;
+	}
+}

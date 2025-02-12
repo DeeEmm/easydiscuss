@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_EASYDISCUSS_MENU_LOGIN">
+		<message><![CDATA[COM_EASYDISCUSS_MENU_LOGIN_DESC]]></message>
+		<view>login</view>
+	</layout>
+</metadata>

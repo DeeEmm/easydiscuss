@@ -1,0 +1,451 @@
+[
+	{
+		"title": "COM_EASYDISCUSS_SIDEBAR_HOME",
+		"icon": "fa fa-home",
+		"link": "index.php?option=com_easydiscuss",
+		"view": "easydiscuss",
+		"active": "layout",
+		"childs": []
+	},
+	{
+		"access": "discuss.manage.settings",
+		"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS",
+		"link": "index.php?option=com_easydiscuss&view=settings",
+		"view": "settings",
+		"active": "layout",
+		"icon": "fa fa-cog",
+		"childs":
+		[
+			{
+				"title": "COM_ED_SIDEBAR_SETTINGS_ATTACHMENTS",
+				"url": {
+					"view": "settings",
+					"layout" : "attachments"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS_ANTISPAM",
+				"url": {
+					"view": "settings",
+					"layout": "antispam"
+				}
+			},
+			{
+				"title": "COM_ED_SIDEBAR_COMPOSER",
+				"url": {
+					"view": "settings",
+					"layout": "composer"
+				}
+			},
+			{
+				"title": "COM_ED_SIDEBAR_CUSTOM_CSS",
+				"url": {
+					"view": "themes",
+					"layout": "custom"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS_EMAIL_PARSER",
+				"url": {
+					"view": "settings",
+					"layout": "email"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_GENERAL",
+				"url": {
+					"view": "settings",
+					"layout": "general"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS_INTEGRATIONS",
+				"url": {
+					"view": "settings",
+					"layout": "integrations"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS_LAYOUT",
+				"url": {
+					"view": "settings",
+					"layout": "layout"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_CATEGORIES",
+				"url": {
+					"view": "settings",
+					"layout": "categories"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS_NOTIFICATIONS",
+				"url":  {
+					"view": "settings",
+					"layout": "notifications"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_RANKS",
+				"url": {
+					"view": "ranks",
+					"layout": ""
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_SETTINGS_SEO",
+				"url": {
+					"view": "settings",
+					"layout": "seo"
+				}
+			},
+			{
+				"title": "COM_ED_SIDEBAR_SYSTEM",
+				"url": {
+					"view": "settings",
+					"layout": "system"
+				}
+			},
+			{
+				"title": "COM_ED_SIDEBAR_USERS",
+				"url": {
+					"view": "settings",
+					"layout": "users"
+				}
+			},
+			{
+				"title": "COM_ED_SIDEBAR_WORK_SCHEDULE",
+				"url": {
+					"view": "settings",
+					"layout": "work"
+				}
+			}
+		]
+	},
+	{
+		"access": "discuss.manage.autoposting",
+		"title": "COM_EASYDISCUSS_SIDEBAR_AUTO_POSTING",
+		"link": "index.php?option=com_easydiscuss&view=autoposting",
+		"view": "autoposting",
+		"active": "layout",
+		"icon": "fa fa-retweet",
+		"childs":
+		[
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_AUTO_POSTING_FACEBOOK",
+				"url": {
+					"view": "autoposting",
+					"layout": "facebook"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_AUTO_POSTING_TWITTER",
+				"url": {
+					"view": "autoposting",
+					"layout": "twitter"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_AUTO_POSTING_LINKEDIN",
+				"url": {
+					"view": "autoposting",
+					"layout": "linkedin"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_AUTO_POSTING_TELEGRAM",
+				"url": {
+					"view": "autoposting",
+					"layout": "telegram"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_AUTO_POSTING_SLACK",
+				"url": {
+					"view": "autoposting",
+					"layout": "slack"
+				}
+			}
+		]
+	},
+	{
+		"access": "discuss.manage.posts",
+		"title": "COM_EASYDISCUSS_SIDEBAR_DISCUSSIONS",
+		"link": "index.php?option=com_easydiscuss&view=posts",
+		"view": "posts",
+		"active": "layout",
+		"icon": "far fa-file-alt",
+		"childs": [
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_DISCUSSIONS_QUESTIONS",
+				"url": {
+					"view": "posts",
+					"layout": ""
+				},
+				"activeViews": [
+					"posts",
+					"post"
+				],
+				"activeLayouts": [
+					"",
+					"questions",
+					"edit"
+				]
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_REPLIES",
+				"url": {
+					"view": "posts",
+					"layout": "replies"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_COMMENTS",
+				"url": {
+					"view": "comments",
+					"layout": ""
+				},
+				"activeLayouts": [
+					"",
+					"form"
+				]
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_PENDING_POSTS",
+				"counter": "threaded/getPendingCount",
+				"url": {
+					"view": "posts",
+					"layout": "pending"
+				}
+			},
+			{
+				"title": "COM_ED_SIDEBAR_HONEYPOT",
+				"url": {
+					"view": "posts",
+					"layout": "honeypot"
+				}
+			}
+		]
+	},
+	{
+		"access": "discuss.manage.categories",
+		"title": "COM_EASYDISCUSS_SIDEBAR_CATEGORIES",
+		"link": "index.php?option=com_easydiscuss&view=categories",
+		"view": "categories",
+		"active": "layout",
+		"icon": "fa fa-list-alt"
+	},
+	{
+		"access": "discuss.manage.customfields",
+		"title": "COM_EASYDISCUSS_SIDEBAR_CUSTOMFIELDS",
+		"view": "customfields",
+		"active": "layout",
+		"icon": "fa fa-table"
+	},
+	{
+		"access": "discuss.manage.tags",
+		"title": "COM_EASYDISCUSS_SIDEBAR_TAGS",
+		"link": "index.php?option=com_easydiscuss&view=tags",
+		"view": "tags",
+		"active": "layout",
+		"icon": "fa fa-hashtag"
+	},
+	{
+		"access": "discuss.manage.users",
+		"title": "COM_EASYDISCUSS_SIDEBAR_USERS",
+		"link": "index.php?option=com_easydiscuss&view=users",
+		"view": "users",
+		"active": "layout",
+		"icon": "fa fa-users",
+		"childs": [
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_USERS",
+				"url": {
+					"view": "users",
+					"layout": ""
+				},
+				"activeLayouts": [
+					"",
+					"form"
+				]
+			},
+			{
+				"title": "COM_ED_SIDEBAR_BANNED_USERS",
+				"url": {
+					"view": "bans",
+					"layout": ""
+				},
+				"activeLayouts": [
+					""
+				]
+			},
+			{
+				"title": "COM_ED_SIDEBAR_USERS_DOWNLOADS",
+				"url": {
+					"view": "users",
+					"layout": "downloads"
+				}
+			}, {
+				"title": "COM_EASYDISCUSS_SIDEBAR_ROLES",
+				"url": {
+					"view": "roles",
+					"layout" : ""
+				},
+				"activeLayouts": [
+					"",
+					"form"
+				]
+			}
+		]
+	},
+	{
+		"access": "discuss.manage.acls",
+		"title": "COM_EASYDISCUSS_SIDEBAR_ACL",
+		"link": "index.php?option=com_easydiscuss&view=acls",
+		"view": "acls",
+		"active": "layout",
+		"icon": "fa fa-user-lock"
+	},
+	{
+		"access": "discuss.manage.subscriptions",
+		"title": "COM_EASYDISCUSS_SIDEBAR_SUBSCRIPTIONS",
+		"link": "index.php?option=com_easydiscuss&view=subscription",
+		"view": "subscription",
+		"active": "layout",
+		"icon": "fa fa-bell"
+	},
+	{
+		"access": "discuss.manage.badges",
+		"title" : "COM_EASYDISCUSS_SIDEBAR_BADGES",
+		"link": "index.php?option=com_easydiscuss&view=badges",
+		"view": "badges",
+		"active": "layout",
+		"icon"  : "fa fa-certificate",
+		"childs": [
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_BADGES",
+				"url": {
+					"view": "badges",
+					"layout": ""
+				},
+				"activeLayouts": [
+					"",
+					"form"
+				]
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_BADGES_MASS_ASSIGN",
+				"url": {
+					"view": "badges",
+					"layout": "assign"
+				}
+			}
+		]
+	},
+	{
+		"access": "discuss.manage.types",
+		"title": "COM_EASYDISCUSS_SIDEBAR_POST_TYPES",
+		"link": "index.php?option=com_easydiscuss&view=types",
+		"view": "types",
+		"active": "layout",
+		"icon": "fa fa-ticket-alt"
+	},
+	{
+		"access":"discuss.manage.priorities",
+		"title": "COM_EASYDISCUSS_SIDEBAR_PRIORITIES",
+		"view":"priorities",
+		"active": "layout",
+		"icon": "fa fa-tasks"
+	},
+	{
+		"access":"discuss.manage.labels",
+		"title": "COM_ED_SIDEBAR_LABELS",
+		"view":"labels",
+		"active": "layout",
+		"icon": "fa fa-tags"
+	},
+	{
+		"access": "discuss.manage.points",
+		"title": "COM_EASYDISCUSS_SIDEBAR_POINTS",
+		"view": "points",
+		"active": "layout",
+		"icon": "fa fa-gamepad"
+	},
+	{
+		"access": "discuss.manage.modules",
+		"title": "Modules",
+		"view": "modules",
+		"active": "layout",
+		"icon": "fa fa-th-large"
+	},
+	{
+		"access": "discuss.manage.languages",
+		"title": "COM_EASYDISCUSS_SIDEBAR_LANGUAGES",
+		"view": "languages",
+		"active": "layout",
+		"icon": "fa fa-language"
+	},
+	{
+		"access": "discuss.manage.emails",
+		"title": "COM_ED_MAILS",
+		"view": "emails",
+		"active": "layout",
+		"icon": "fa fa-envelope",
+		"childs": [
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_EMAIL_ACTIVITIES",
+				"url": {
+					"view": "spools",
+					"layout": ""
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_EMAIL_TEMPLATES",
+				"url": {
+					"view": "emails",
+					"layout": ""
+				}
+			}
+		]
+	},
+	{
+		"access": "discuss.manage.reports",
+		"title": "COM_EASYDISCUSS_SIDEBAR_REPORTS",
+		"link": "index.php?option=com_easydiscuss&view=reports",
+		"view": "reports",
+		"active": "layout",
+		"icon": "fa fa-exclamation-triangle"
+	},
+	{
+		"access": "discuss.manage.migrators",
+		"title": "COM_EASYDISCUSS_SIDEBAR_MIGRATORS",
+		"view": "migrators",
+		"active": "layout",
+		"icon": "fa fa-truck",
+		"childs":
+		[
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_MIGRATORS_KUNENA",
+				"url": {
+					"view": "migrators",
+					"layout": "kunena"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_MIGRATORS_JOMSOCIAL_GROUPS",
+				"url": {
+					"view": "migrators",
+					"layout": "jomsocial"
+				}
+			},
+			{
+				"title": "COM_EASYDISCUSS_SIDEBAR_MIGRATORS_VBULLETIN",
+				"url": {
+					"view": "migrators",
+					"layout": "vbulletin"
+				}
+			}
+		]
+	}
+]
