@@ -45,11 +45,11 @@ define('SI_MANIFEST', 'https://stackideas.com/updater/manifests/' . SI_IDENTIFIE
 define('SI_SETUP_URL', JURI::base() . 'components/' . SI_IDENTIFIER . '/setup');
 define('SI_TMP', $path . '/tmp');
 define('SI_BETA', false);
-define('SI_KEY', '3c82e185e28a1f41abb8794bce42b29d');
+define('SI_KEY', '12345678901234567890123456789012');
 define('SI_INSTALLER', 'full');
 
 // Only when SI_PACKAGE is running on full package, the SI_PACKAGE should contain the zip's filename
-define('SI_PACKAGE', 'com_easydiscuss_5.0.11_component_pro.zip');
+define('SI_PACKAGE', 'com_easydiscuss_5.0.15_component_pro.zip');
 
 // If this is in developer mode, we need to set the session
 if ($developer) {

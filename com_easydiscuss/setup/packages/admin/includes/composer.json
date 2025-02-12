@@ -1,6 +1,0 @@
-{
-    "require": {
-        "willdurand/email-reply-parser": "^2.9",
-        "nahid/jsonq": "^5.2"
-    }
-}
