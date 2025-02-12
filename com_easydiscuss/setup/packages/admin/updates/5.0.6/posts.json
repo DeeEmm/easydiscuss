@@ -1,0 +1,18 @@
+[
+	{
+		"table": "#__discuss_thread",
+		"alter": "latitude",
+		"query": "ALTER TABLE `#__discuss_thread` MODIFY `latitude` varchar(255) NOT NULL DEFAULT '';"
+	},
+	{
+		"table": "#__discuss_thread",
+		"alter": "longitude",
+		"query": "ALTER TABLE `#__discuss_thread` MODIFY `longitude` varchar(255) NOT NULL DEFAULT '';"
+	},
+	{
+		"table": "#__discuss_posts",
+		"alter": "ip",
+		"query": "ALTER TABLE `#__discuss_posts` MODIFY `ip` VARCHAR(255) NOT NULL DEFAULT '';"	
+	}
+]
+

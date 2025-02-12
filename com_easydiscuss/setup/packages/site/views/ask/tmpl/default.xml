@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_EASYDISCUSS_MENU_SUBMIT_LAYOUT">
+		<message>COM_EASYDISCUSS_MENU_SUBMIT_LAYOUT_DESC</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_easydiscuss/elements/fields">
+			<field name="category" type="modal_categories" label="COM_EASYDISCUSS_SELECT_CATEGORY" description="COM_ED_SELECT_CATEGORY_DESC" />
+		</fieldset>
+	</fields>
+</metadata>

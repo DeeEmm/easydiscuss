@@ -1,0 +1,92 @@
+[
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "create",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "reply",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "comment",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "accepted",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "accepted.owner",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "likes",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "mentions",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "vote",
+		"value" :
+		{
+			"email" : false,
+			"system" : true
+		}
+	},
+	{
+		"extension" : "com_easydiscuss",
+		"element" : "discuss",
+		"rule" : "moderate",
+		"value" :
+		{
+			"email" : -1,
+			"system" : true
+		}
+	}
+]
