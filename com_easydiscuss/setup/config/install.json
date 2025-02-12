@@ -1,0 +1,18 @@
+[
+	{
+		"index": 1,
+		"title": "License",
+		"desc": "Associate licence for this installation",
+		"template": "installing.source"
+	}, {
+		"index": 2,
+		"title": "Installation",
+		"desc": "Setting up necessary dependencies for EasyDiscuss",
+		"template": "installing"
+	}, {
+		"index": 3,
+		"title": "Addons",
+		"desc": "Setting up modules and plugins",
+		"template": "addons"
+	}
+]
